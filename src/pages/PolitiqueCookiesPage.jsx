@@ -429,7 +429,7 @@ export default function PolitiqueCookiesPage() {
                 </div>
                 <div style={{ display: 'flex', gap: '0.5rem', alignItems: 'center', ...S.body }}>
                   <Mail size={13} style={{ color: '#C97D16', flexShrink: 0 }} />
-                  <a href="mailto:contact@hpro-travaux.fr" style={S.link}>contact@hpro-travaux.fr</a>
+                  <a href="mailto:contact@hprotravaux.fr" style={S.link}>contact@hprotravaux.fr</a>
                 </div>
                 <div style={{ display: 'flex', gap: '0.5rem', alignItems: 'center', ...S.body }}>
                   <Phone size={13} style={{ color: '#C97D16', flexShrink: 0 }} />

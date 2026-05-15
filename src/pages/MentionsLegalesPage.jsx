@@ -253,7 +253,7 @@ export default function MentionsLegalesPage() {
                 </div>
                 <div style={{ display: 'flex', gap: '0.5rem', alignItems: 'center', marginBottom: '0.7rem' }}>
                   <Mail size={13} style={{ color: '#C97D16', flexShrink: 0 }} />
-                  <a href="mailto:contact@hpro-travaux.fr" style={S.link}>contact@hpro-travaux.fr</a>
+                  <a href="mailto:contact@hprotravaux.fr" style={S.link}>contact@hprotravaux.fr</a>
                 </div>
               </div>
               <div style={{ paddingTop: '1rem', borderTop: '1px solid rgba(28,31,20,0.07)' }}>
@@ -326,7 +326,7 @@ export default function MentionsLegalesPage() {
               </ul>
               <div style={{ marginTop: '1.2rem', paddingTop: '1rem', borderTop: '1px solid rgba(28,31,20,0.07)', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
                 <Mail size={13} style={{ color: '#C97D16', flexShrink: 0 }} />
-                <a href="mailto:contact@hpro-travaux.fr" style={S.link}>contact@hpro-travaux.fr</a>
+                <a href="mailto:contact@hprotravaux.fr" style={S.link}>contact@hprotravaux.fr</a>
               </div>
             </LegalCard>
 

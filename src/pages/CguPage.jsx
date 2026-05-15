@@ -289,7 +289,7 @@ export default function CguPage() {
                 </div>
                 <div style={{ display: 'flex', gap: '0.5rem', alignItems: 'center', ...S.body }}>
                   <Mail size={13} style={{ color: '#C97D16', flexShrink: 0 }} />
-                  <a href="mailto:contact@hpro-travaux.fr" style={S.link}>contact@hpro-travaux.fr</a>
+                  <a href="mailto:contact@hprotravaux.fr" style={S.link}>contact@hprotravaux.fr</a>
                 </div>
               </div>
               <div style={{ paddingTop: '1rem', borderTop: '1px solid rgba(28,31,20,0.07)', marginTop: '0.5rem' }}>

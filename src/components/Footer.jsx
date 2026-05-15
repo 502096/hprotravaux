@@ -41,7 +41,7 @@ const usefulLinks = [
 ]
 
 const contactInfo = [
-  { Icon: Mail,   text: 'contact@hpro-travaux.fr', href: 'mailto:contact@hpro-travaux.fr' },
+  { Icon: Mail,   text: 'contact@hprotravaux.fr', href: 'mailto:contact@hprotravaux.fr' },
   { Icon: Phone,  text: '06 73 74 66 70',           href: 'tel:+33673746670' },
   { Icon: MapPin, text: 'Livry-Gargan & Île-de-France', href: '#', isAddress: true },
 ]
