@@ -4,7 +4,6 @@ import { ArrowRight, CheckCircle } from 'lucide-react'
 const guarantees = [
   'Visite de site gratuite et sans engagement',
   'Devis détaillé poste par poste',
-  'Garantie décennale sur tous nos travaux',
   'Artisans certifiés RGE — Aides MaPrimeRénov\'',
 ]
 

@@ -1,12 +1,7 @@
 import { motion } from 'framer-motion'
-import { ShieldCheck, Award, Clock, MapPin, Handshake } from 'lucide-react'
+import { Award, Clock, MapPin, Handshake } from 'lucide-react'
 
 const guarantees = [
-  {
-    Icon: ShieldCheck,
-    label: 'Garantie décennale',
-    sub: 'Couverture 10 ans',
-  },
   {
     Icon: Award,
     label: 'Artisans qualifiés',
