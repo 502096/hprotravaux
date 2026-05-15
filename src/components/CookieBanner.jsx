@@ -2,6 +2,7 @@ import { useState, useEffect, useCallback } from 'react'
 import { createPortal } from 'react-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Cookie, Shield, BarChart2, Zap, X } from 'lucide-react'
+import './CookieBanner.css'
 
 /* ─── Storage ────────────────────────────────────────────────── */
 
@@ -166,7 +167,7 @@ function PreferencesModal({ analytics, onAnalyticsChange, onSave, onClose }) {
           {/* Categories */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: '0.65rem', marginBottom: '1.4rem' }}>
             {categories.map(({ Icon, color, title, desc, enabled, disabled, key }) => (
-              <div key={key} style={{
+              <div key={key} className="cb-pref-category" style={{
                 display: 'flex', alignItems: 'flex-start', gap: '0.9rem',
                 padding: '0.9rem 1rem',
                 background: '#ffffff',
@@ -310,12 +311,7 @@ export default function CookieBanner() {
                 background: 'linear-gradient(90deg, transparent 0%, #C97D16 35%, rgba(201,125,22,0.5) 65%, transparent 100%)',
               }} />
 
-              <div style={{
-                padding: 'clamp(1.1rem, 3vw, 1.5rem) clamp(1.2rem, 3vw, 1.8rem)',
-                display: 'flex',
-                flexDirection: 'column',
-                gap: '1rem',
-              }}>
+              <div className="cb-inner">
                 {/* Top row: icon + text */}
                 <div style={{ display: 'flex', alignItems: 'flex-start', gap: '0.9rem' }}>
                   <div style={{
@@ -358,14 +354,9 @@ export default function CookieBanner() {
                 </div>
 
                 {/* Buttons row */}
-                <div style={{
-                  display: 'flex',
-                  flexWrap: 'wrap',
-                  gap: '0.6rem',
-                  justifyContent: 'flex-end',
-                  alignItems: 'center',
-                }}>
+                <div className="cb-btn-row">
                   <button
+                    className="cb-btn-personalize"
                     onClick={openPrefs}
                     style={{
                       fontFamily: 'var(--font-sans)', fontSize: '0.8rem', fontWeight: 600,
@@ -381,6 +372,7 @@ export default function CookieBanner() {
                     Personnaliser
                   </button>
                   <button
+                    className="cb-btn-refuse"
                     onClick={refuse}
                     style={{
                       fontFamily: 'var(--font-sans)', fontSize: '0.8rem', fontWeight: 600,
@@ -390,7 +382,6 @@ export default function CookieBanner() {
                       borderRadius: 99, padding: '0.55rem 1.1rem',
                       cursor: 'pointer',
                       transition: 'background 0.18s',
-                      whiteSpace: 'nowrap',
                     }}
                     onMouseEnter={e => e.currentTarget.style.background = 'rgba(28,31,20,0.12)'}
                     onMouseLeave={e => e.currentTarget.style.background = 'rgba(28,31,20,0.07)'}
@@ -398,6 +389,7 @@ export default function CookieBanner() {
                     Refuser
                   </button>
                   <button
+                    className="cb-btn-accept"
                     onClick={accept}
                     style={{
                       fontFamily: 'var(--font-sans)', fontSize: '0.8rem', fontWeight: 700,
@@ -407,7 +399,6 @@ export default function CookieBanner() {
                       borderRadius: 99, padding: '0.55rem 1.3rem',
                       cursor: 'pointer',
                       transition: 'background 0.18s, transform 0.15s',
-                      whiteSpace: 'nowrap',
                       letterSpacing: '0.01em',
                     }}
                     onMouseEnter={e => e.currentTarget.style.background = '#b86e10'}

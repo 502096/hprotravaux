@@ -1,0 +1,80 @@
+/* ── Cookie Banner ─────────────────────────────────────── */
+
+.cb-inner {
+  padding: clamp(1.1rem, 3vw, 1.5rem) clamp(1.2rem, 3vw, 1.8rem);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.cb-btn-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.cb-btn-accept,
+.cb-btn-refuse {
+  white-space: nowrap;
+}
+
+.cb-btn-personalize {
+  white-space: nowrap;
+}
+
+/* ── Preferences modal category row ───────────────────── */
+
+.cb-pref-category {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.9rem;
+  padding: 0.9rem 1rem;
+  background: #ffffff;
+  border-radius: 12px;
+  border: 1px solid rgba(28, 31, 20, 0.07);
+}
+
+/* ── Mobile: ≤ 480px ───────────────────────────────────── */
+
+@media (max-width: 480px) {
+  .cb-inner {
+    padding: 1rem;
+    gap: 0.85rem;
+  }
+
+  .cb-btn-row {
+    flex-direction: column;
+    justify-content: stretch;
+    align-items: stretch;
+    gap: 0.5rem;
+  }
+
+  /* Accept first (primary CTA), then refuse, then personalize */
+  .cb-btn-accept  { order: 1; width: 100%; box-sizing: border-box; text-align: center; }
+  .cb-btn-refuse  { order: 2; width: 100%; box-sizing: border-box; text-align: center; }
+  .cb-btn-personalize { order: 3; width: 100%; box-sizing: border-box; text-align: center; }
+
+  /* Taller touch targets */
+  .cb-btn-accept,
+  .cb-btn-refuse {
+    padding-top: 0.75rem !important;
+    padding-bottom: 0.75rem !important;
+    border-radius: 10px !important;
+  }
+
+  /* Preferences modal category row: tighter on small screens */
+  .cb-pref-category {
+    padding: 0.75rem 0.75rem;
+    gap: 0.7rem;
+  }
+}
+
+/* ── Very small screens: ≤ 360px ──────────────────────── */
+
+@media (max-width: 360px) {
+  .cb-inner {
+    padding: 0.85rem;
+  }
+}
