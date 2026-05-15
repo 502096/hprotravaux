@@ -391,8 +391,9 @@ button { border: none; background: none; font-family: inherit; }
 .hero-bg {
   position: absolute; inset: 0;
   background:
-    linear-gradient(160deg, rgba(26,32,16,0.35) 0%, rgba(28,31,20,0.22) 60%, rgba(28,31,20,0.12) 100%),
-    url('/images/910.jpg') center center / cover no-repeat;
+    radial-gradient(ellipse 65% 90% at 65% 45%, rgba(85,107,47,0.30) 0%, transparent 60%),
+    radial-gradient(ellipse 35% 50% at 15% 85%, rgba(201,125,22,0.10) 0%, transparent 50%),
+    linear-gradient(160deg, #1A2010 0%, #2A3618 40%, #1C1F14 100%);
 }
 .hero-grid {
   position: absolute; inset: 0;

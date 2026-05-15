@@ -98,14 +98,14 @@ const PrismaHero = () => {
 
       {/* Background image */}
       <motion.img
-        src="/images/modern-interior-design-interior.jpg"
+        src="/images/910.jpg"
         alt=""
         aria-hidden
         fetchpriority="high"
         className="absolute inset-0 w-full h-full object-cover pointer-events-none"
-        style={{ objectPosition: 'center 42%' }}
+        style={{ objectPosition: 'center center' }}
         initial={{ opacity: 0, scale: 1.05 }}
-        animate={{ opacity: 0.82, scale: 1 }}
+        animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 1.4, ease: [0.16, 1, 0.3, 1] }}
       />
 
