@@ -79,7 +79,7 @@
         },
         "image": "https://www.hpro-travaux.fr/images/1.jpg",
         "telephone": "+33673746670",
-        "email": "contact@hpro-travaux.fr",
+        "email": "contact@hprotravaux.fr",
         "foundingDate": "2018",
         "description": "Entreprise de rénovation intérieure tous corps d'état en Île-de-France. Artisans qualifiés, coordination complète de A à Z, devis gratuit sous 48h.",
         "address": {
@@ -146,7 +146,7 @@
         "contactPoint": {
           "@type": "ContactPoint",
           "telephone": "+33673746670",
-          "email": "contact@hpro-travaux.fr",
+          "email": "contact@hprotravaux.fr",
           "contactType": "customer service",
           "availableLanguage": "French",
           "areaServed": "FR"
@@ -178,6 +178,21 @@
   </script>
 </head>
 <body>
+  <!-- Ghost form for Netlify Forms build-time detection.
+       Hidden from users; field names must match the real React form. -->
+  <form name="devis" netlify netlify-honeypot="bot-field" hidden>
+    <input type="text"     name="prenom" />
+    <input type="text"     name="nom" />
+    <input type="email"    name="email" />
+    <input type="tel"      name="telephone" />
+    <input type="text"     name="type_projet" />
+    <input type="text"     name="surface" />
+    <input type="text"     name="budget" />
+    <textarea              name="message"></textarea>
+    <input type="checkbox" name="rgpd" />
+    <input                 name="bot-field" />
+  </form>
+
   <div id="root"></div>
   <script type="module" src="/src/main.jsx"></script>
 </body>
