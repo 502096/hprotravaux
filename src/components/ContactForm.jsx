@@ -64,7 +64,7 @@ export default function ContactForm() {
               <form
                 name="devis"
                 method="POST"
-                action="#contact"
+                action="/success.html"
                 data-netlify="true"
                 netlify-honeypot="bot-field"
               >
