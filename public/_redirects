@@ -1,6 +1,4 @@
 # Netlify SPA Routing — H Pro Travaux
-# Redirige toutes les routes vers index.html pour le routage côté client
-# Exception : success.html est servi tel quel après soumission du formulaire
+# Toutes les routes passent par index.html, le routage est géré par React
 
-/success.html    /success.html    200
-/*               /index.html      200
+/*    /index.html    200

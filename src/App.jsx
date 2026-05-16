@@ -20,6 +20,7 @@ import PolitiqueConfidentialitePage from './pages/PolitiqueConfidentialitePage'
 import PolitiqueCookiesPage from './pages/PolitiqueCookiesPage'
 import CguPage from './pages/CguPage'
 import NotFoundPage from './pages/NotFoundPage'
+import SuccessPage from './pages/SuccessPage'
 
 const path = window.location.pathname
 const isAboutPage = path.startsWith('/a-propos')
@@ -27,6 +28,7 @@ const isMentionsLegales = path.startsWith('/mentions-legales')
 const isPolitiqueConfidentialite = path.startsWith('/politique-confidentialite')
 const isPolitiqueCookies = path.startsWith('/politique-cookies')
 const isCgu = path.startsWith('/cgu')
+const isSuccessPage = path === '/success.html' || path === '/success'
 const isHomePage = path === '/' || path === ''
 
 function PageContent() {
@@ -35,6 +37,7 @@ function PageContent() {
   if (isPolitiqueConfidentialite) return <PolitiqueConfidentialitePage />
   if (isPolitiqueCookies) return <PolitiqueCookiesPage />
   if (isCgu) return <CguPage />
+  if (isSuccessPage) return <SuccessPage />
   if (!isHomePage) return <NotFoundPage />
 
   return (
