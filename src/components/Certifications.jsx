@@ -1,28 +1,13 @@
 import { motion } from 'framer-motion'
-import { Award, Clock, MapPin, Handshake } from 'lucide-react'
+import { Award, Clock, MapPin, Handshake, Star, Shield, CheckCircle, ThumbsUp } from 'lucide-react'
+import certificationsData from '../content/certifications.json'
 
-const guarantees = [
-  {
-    Icon: Award,
-    label: 'Artisans qualifiés',
-    sub: 'Sélectionnés & certifiés',
-  },
-  {
-    Icon: Clock,
-    label: 'Devis sous 48h',
-    sub: 'Gratuit & sans engagement',
-  },
-  {
-    Icon: MapPin,
-    label: 'Île-de-France',
-    sub: '250+ chantiers livrés',
-  },
-  {
-    Icon: Handshake,
-    label: 'Suivi personnalisé',
-    sub: 'Un chef de projet dédié',
-  },
-]
+const ICON_MAP = { Award, Clock, MapPin, Handshake, Star, Shield, CheckCircle, ThumbsUp }
+
+const guarantees = certificationsData.items.map(item => ({
+  ...item,
+  Icon: ICON_MAP[item.iconName] || Award,
+}))
 
 export default function Certifications() {
   return (

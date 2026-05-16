@@ -1,0 +1,30 @@
+{
+  "title": "Nos prestations clé en main",
+  "lead": "Nous intervenons sur les prestations suivantes pour réaliser votre projet dans sa globalité et selon votre budget.",
+  "steps": [
+    {
+      "iconName": "Search",
+      "phase": "Étape 01",
+      "title": "Gestion de projet",
+      "text": "Nous analysons votre demande et apportons notre expertise en gestion de projet afin d'en valider la faisabilité."
+    },
+    {
+      "iconName": "FileText",
+      "phase": "Étape 02",
+      "title": "Etude et proposition",
+      "text": "Nous élaborons une ou deux propositions conformes à vos attentes ; après validation, nous lançons le projet et sélectionnons les artisans à mobiliser."
+    },
+    {
+      "iconName": "HardHat",
+      "phase": "Étape 03",
+      "title": "Travaux",
+      "text": "Les travaux sont réalisés par des artisans qualifiés, selon le calendrier convenu, avec un suivi rigoureux tout au long du chantier afin d'anticiper tout imprévu."
+    },
+    {
+      "iconName": "CheckCircle",
+      "phase": "Étape 04",
+      "title": "Réception des travaux",
+      "text": "En fin de travaux et après nettoyage, notre service de suivi vous invite à valider ensemble le résultat et recueillir vos éventuels besoins complémentaires afin d'assurer votre satisfaction."
+    }
+  ]
+}

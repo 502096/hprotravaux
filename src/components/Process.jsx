@@ -1,32 +1,13 @@
 import { motion } from 'framer-motion'
-import { Search, FileText, HardHat, CheckCircle } from 'lucide-react'
+import { Search, FileText, HardHat, CheckCircle, Wrench, Settings } from 'lucide-react'
+import processData from '../content/process.json'
 
-const steps = [
-  {
-    icon: Search,
-    phase: 'Étape 01',
-    title: 'Gestion de projet',
-    text: 'Nous analysons votre demande et apportons notre expertise en gestion de projet afin d\'en valider la faisabilité.',
-  },
-  {
-    icon: FileText,
-    phase: 'Étape 02',
-    title: 'Etude et proposition',
-    text: 'Nous élaborons une ou deux propositions conformes à vos attentes ; après validation, nous lançons le projet et sélectionnons les artisans à mobiliser.',
-  },
-  {
-    icon: HardHat,
-    phase: 'Étape 03',
-    title: 'Travaux',
-    text: 'Les travaux sont réalisés par des artisans qualifiés, selon le calendrier convenu, avec un suivi rigoureux tout au long du chantier afin d\'anticiper tout imprévu.',
-  },
-  {
-    icon: CheckCircle,
-    phase: 'Étape 04',
-    title: 'Réception des travaux',
-    text: 'En fin de travaux et après nettoyage, notre service de suivi vous invite à valider ensemble le résultat et recueillir vos éventuels besoins complémentaires afin d\'assurer votre satisfaction.',
-  },
-]
+const ICON_MAP = { Search, FileText, HardHat, CheckCircle, Wrench, Settings, Tool: Wrench }
+
+const steps = processData.steps.map(s => ({
+  ...s,
+  icon: ICON_MAP[s.iconName] || CheckCircle,
+}))
 
 export default function Process() {
   return (
@@ -40,7 +21,7 @@ export default function Process() {
             viewport={{ once: true }}
             transition={{ duration: 0.65, delay: 0.1 }}
           >
-            Nos prestations clé en main
+            {processData.title}
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 16 }}
@@ -56,7 +37,7 @@ export default function Process() {
               fontWeight: 400,
             }}
           >
-            Nous intervenons sur les prestations suivantes pour réaliser votre projet dans sa globalité et selon votre budget.
+            {processData.lead}
           </motion.p>
         </div>
 

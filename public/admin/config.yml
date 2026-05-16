@@ -1,0 +1,171 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "public/images"
+public_folder: "/images"
+
+locale: fr
+
+collections:
+  - name: "parametres"
+    label: "Paramètres du site"
+    files:
+      - name: "settings"
+        label: "Informations générales"
+        file: "src/content/settings.json"
+        format: "json"
+        fields:
+          - { label: "Nom de l'entreprise", name: "company_name", widget: "string" }
+          - { label: "Description (SEO & footer)", name: "description", widget: "text" }
+          - { label: "Email de contact", name: "email", widget: "string" }
+          - { label: "Téléphone (affichage)", name: "phone_display", widget: "string" }
+          - { label: "Téléphone (href tel:)", name: "phone_href", widget: "string" }
+          - { label: "Adresse", name: "address", widget: "string" }
+          - { label: "Horaires", name: "hours", widget: "string" }
+          - { label: "Zones d'intervention", name: "zones", widget: "string" }
+          - { label: "Instagram (URL complète)", name: "instagram", widget: "string" }
+          - { label: "Facebook (URL complète)", name: "facebook", widget: "string" }
+          - { label: "LinkedIn (URL complète)", name: "linkedin", widget: "string" }
+
+  - name: "accueil"
+    label: "Page d'accueil"
+    files:
+      - name: "hero"
+        label: "Bannière principale"
+        file: "src/content/hero.json"
+        format: "json"
+        fields:
+          - { label: "Image de fond", name: "image", widget: "image" }
+          - { label: "Titre — ligne 1 (blanc)", name: "headline1", widget: "string" }
+          - { label: "Titre — ligne 2 (orange)", name: "headline2", widget: "string" }
+          - { label: "Titre — ligne 3 (blanc)", name: "headline3", widget: "string" }
+          - { label: "Accroche (texte italique à droite)", name: "tagline", widget: "string" }
+          - { label: "Texte du bouton CTA", name: "cta_text", widget: "string" }
+          - label: "Barre défilante (marquee)"
+            name: "marquee_items"
+            widget: "list"
+            fields:
+              - { label: "Emoji", name: "emoji", widget: "string" }
+              - { label: "Valeur (ex: 250+) — laisser vide si aucune", name: "value", widget: "string", required: false }
+              - { label: "Label (en majuscules)", name: "label", widget: "string" }
+
+      - name: "stats"
+        label: "Statistiques clés"
+        file: "src/content/stats.json"
+        format: "json"
+        fields:
+          - label: "Chiffres"
+            name: "items"
+            widget: "list"
+            fields:
+              - { label: "Valeur cible (nombre)", name: "target", widget: "number" }
+              - { label: "Suffixe (ex: +, %, laisser vide si aucun)", name: "suffix", widget: "string", required: false }
+              - { label: "Libellé", name: "label", widget: "string" }
+
+      - name: "certifications"
+        label: "Badges de confiance"
+        file: "src/content/certifications.json"
+        format: "json"
+        fields:
+          - label: "Badges"
+            name: "items"
+            widget: "list"
+            fields:
+              - label: "Icône"
+                name: "iconName"
+                widget: "select"
+                options:
+                  - { label: "Trophée (Award)", value: "Award" }
+                  - { label: "Horloge (Clock)", value: "Clock" }
+                  - { label: "Localisation (MapPin)", value: "MapPin" }
+                  - { label: "Poignée de main (Handshake)", value: "Handshake" }
+                  - { label: "Étoile (Star)", value: "Star" }
+                  - { label: "Bouclier (Shield)", value: "Shield" }
+                  - { label: "Coche (CheckCircle)", value: "CheckCircle" }
+                  - { label: "Pouce levé (ThumbsUp)", value: "ThumbsUp" }
+              - { label: "Titre", name: "label", widget: "string" }
+              - { label: "Sous-titre", name: "sub", widget: "string" }
+
+      - name: "services"
+        label: "Services premium"
+        file: "src/content/services.json"
+        format: "json"
+        fields:
+          - { label: "Tag de section (petit texte au-dessus du titre)", name: "section_tag", widget: "string" }
+          - { label: "Titre — partie 1", name: "title1", widget: "string" }
+          - { label: "Titre — partie 2 (en orange)", name: "title2", widget: "string" }
+          - { label: "Accroche", name: "lead", widget: "text" }
+          - { label: "Texte du bouton CTA", name: "cta_text", widget: "string" }
+          - label: "Cartes service"
+            name: "items"
+            widget: "list"
+            fields:
+              - { label: "Numéro (ex: 01)", name: "num", widget: "string" }
+              - label: "Couleur de l'effet lumineux"
+                name: "glowColor"
+                widget: "select"
+                options:
+                  - { label: "Orange", value: "orange" }
+                  - { label: "Violet", value: "purple" }
+                  - { label: "Vert", value: "green" }
+                  - { label: "Bleu", value: "blue" }
+                  - { label: "Rose", value: "pink" }
+              - { label: "Titre du service", name: "title", widget: "string" }
+              - { label: "Description", name: "desc", widget: "text" }
+              - { label: "Image", name: "image", widget: "image" }
+              - { label: "Texte alternatif de l'image (accessibilité SEO)", name: "imageAlt", widget: "string" }
+
+      - name: "process"
+        label: "Notre processus (étapes)"
+        file: "src/content/process.json"
+        format: "json"
+        fields:
+          - { label: "Titre de section", name: "title", widget: "string" }
+          - { label: "Accroche", name: "lead", widget: "text" }
+          - label: "Étapes"
+            name: "steps"
+            widget: "list"
+            fields:
+              - label: "Icône"
+                name: "iconName"
+                widget: "select"
+                options:
+                  - { label: "Loupe (Search)", value: "Search" }
+                  - { label: "Document (FileText)", value: "FileText" }
+                  - { label: "Casque de chantier (HardHat)", value: "HardHat" }
+                  - { label: "Coche (CheckCircle)", value: "CheckCircle" }
+                  - { label: "Outil (Tool)", value: "Tool" }
+                  - { label: "Engrenage (Settings)", value: "Settings" }
+              - { label: "Phase (ex: Étape 01)", name: "phase", widget: "string" }
+              - { label: "Titre de l'étape", name: "title", widget: "string" }
+              - { label: "Description", name: "text", widget: "text" }
+
+      - name: "gallery"
+        label: "Galerie de réalisations"
+        file: "src/content/gallery.json"
+        format: "json"
+        fields:
+          - { label: "Tag de section", name: "section_tag", widget: "string" }
+          - { label: "Titre — ligne 1", name: "title1", widget: "string" }
+          - { label: "Titre — ligne 2 (en orange)", name: "title2", widget: "string" }
+          - label: "Photos"
+            name: "items"
+            widget: "list"
+            fields:
+              - { label: "Photo", name: "src", widget: "image" }
+              - { label: "Description de l'image (accessibilité SEO)", name: "alt", widget: "string" }
+
+      - name: "faq"
+        label: "FAQ — Questions fréquentes"
+        file: "src/content/faq.json"
+        format: "json"
+        fields:
+          - { label: "Tag de section", name: "section_tag", widget: "string" }
+          - { label: "Titre", name: "title", widget: "string" }
+          - label: "Questions / Réponses"
+            name: "items"
+            widget: "list"
+            fields:
+              - { label: "Question", name: "q", widget: "string" }
+              - { label: "Réponse", name: "a", widget: "text" }

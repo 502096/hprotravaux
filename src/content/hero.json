@@ -1,0 +1,14 @@
+{
+  "image": "/images/910.jpg",
+  "headline1": "Votre intérieur",
+  "headline2": "mérite mieux",
+  "headline3": "qu'un simple rafraîchissement",
+  "tagline": "Hpro Travaux transforme chaque pièce en un espace où l'on a vraiment envie de vivre.",
+  "cta_text": "Devis gratuit",
+  "marquee_items": [
+    { "emoji": "🔥", "label": "DEVIS GRATUIT · SANS ENGAGEMENT" },
+    { "emoji": "🚀", "value": "2M€+", "label": "DE TRAVAUX RÉALISÉS" },
+    { "emoji": "🏠", "value": "250+", "label": "CHANTIERS LIVRÉS EN ÎLE-DE-FRANCE" },
+    { "emoji": "⭐", "value": "98%", "label": "DE CLIENTS SATISFAITS" }
+  ]
+}

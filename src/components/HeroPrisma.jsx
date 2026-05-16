@@ -3,6 +3,7 @@ import { motion, useInView } from 'framer-motion'
 import { ArrowRight } from 'lucide-react'
 import Marquee from 'react-fast-marquee'
 import { TopbarNav } from '@/components/ui/topbar-nav'
+import heroData from '../content/hero.json'
 
 /* ─── Kept exports (used by other components) ─────────────── */
 
@@ -80,12 +81,7 @@ const teamAvatars = [
   { initials: 'LD', src: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=80&q=80&fit=crop&crop=face' },
 ]
 
-const statsItems = [
-  { emoji: '🔥', label: 'DEVIS GRATUIT · SANS ENGAGEMENT' },
-  { emoji: '🚀', value: '2M€+', label: 'DE TRAVAUX RÉALISÉS' },
-  { emoji: '🏠', value: '250+', label: 'CHANTIERS LIVRÉS EN ÎLE-DE-FRANCE' },
-  { emoji: '⭐', value: '98%', label: 'DE CLIENTS SATISFAITS' },
-]
+const statsItems = heroData.marquee_items
 
 /* ─── PrismaHero ──────────────────────────────────────────── */
 
@@ -98,7 +94,7 @@ const PrismaHero = () => {
 
       {/* Background image */}
       <motion.img
-        src="/images/910.jpg"
+        src={heroData.image}
         alt=""
         aria-hidden
         fetchpriority="high"
@@ -199,9 +195,9 @@ const PrismaHero = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.85, delay: 0.25, ease: [0.16, 1, 0.3, 1] }}
               >
-                <span style={{ display: 'block' }}>Votre intérieur</span>
-                <span style={{ display: 'block', color: '#C97D16' }}>mérite mieux</span>
-                <span style={{ display: 'block' }}>qu'un simple rafraîchissement</span>
+                <span style={{ display: 'block' }}>{heroData.headline1}</span>
+                <span style={{ display: 'block', color: '#C97D16' }}>{heroData.headline2}</span>
+                <span style={{ display: 'block' }}>{heroData.headline3}</span>
               </motion.h1>
 
               <motion.button
@@ -222,7 +218,7 @@ const PrismaHero = () => {
                 whileHover={{ scale: 1.04, y: -2, boxShadow: '0 14px 36px rgba(201,125,22,0.45)' }}
                 whileTap={{ scale: 0.97 }}
               >
-                Devis gratuit
+                {heroData.cta_text}
                 <span
                   className="flex items-center justify-center rounded-full"
                   style={{ width: 32, height: 32, background: 'rgba(0,0,0,0.22)' }}
@@ -247,8 +243,7 @@ const PrismaHero = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.5 }}
             >
-              Hpro Travaux transforme chaque pièce en un espace
-              où l'on a vraiment envie de vivre.
+              {heroData.tagline}
             </motion.p>
 
           </div>

@@ -1,33 +1,9 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Plus, Minus } from 'lucide-react'
+import faqData from '../content/faq.json'
 
-const faqs = [
-  {
-    q: 'Comment obtenir un devis ?',
-    a: "Contactez-nous via notre formulaire ou par téléphone. Nous vous répondons sous 48h et planifions une visite gratuite pour chiffrer votre projet avec précision, sans engagement de votre part.",
-  },
-  {
-    q: 'Quels types de travaux prenez-vous en charge ?',
-    a: "Nous intervenons sur tous les corps d'état : plomberie, électricité, carrelage, peinture, menuiserie, isolation, faux-plafonds, revêtements de sol, et bien plus. Un interlocuteur unique coordonne l'ensemble des artisans sélectionnés.",
-  },
-  {
-    q: "Quelle est votre zone d'intervention ?",
-    a: "Nous intervenons en Île-de-France : Livry-Gargan, Les Pavillons-sous-Bois, Claye-Souilly et toutes les communes environnantes. Contactez-nous pour vérifier votre secteur.",
-  },
-  {
-    q: 'Quelles garanties offrez-vous sur les travaux ?',
-    a: "Tous nos chantiers bénéficient de la garantie décennale, de la garantie biennale et de la responsabilité civile professionnelle. Vos travaux sont couverts bien après la livraison du chantier.",
-  },
-  {
-    q: 'Combien coûte une rénovation complète ?',
-    a: "Le budget dépend de la surface, des matériaux et des prestations choisies. Nous établissons un devis détaillé et transparent, sans frais cachés ni mauvaise surprise. Demandez votre estimation gratuite dès aujourd'hui.",
-  },
-  {
-    q: 'Comment se déroule le suivi de chantier ?',
-    a: "Un chef de projet dédié coordonne les artisans, vous tient informé à chaque étape et anticipe les imprévus. Des points d'avancement réguliers vous sont communiqués jusqu'à la réception finale des travaux.",
-  },
-]
+const { section_tag, title, items: faqs } = faqData
 
 export default function FAQ() {
   const [open, setOpen] = useState(null)
@@ -46,7 +22,7 @@ export default function FAQ() {
             transition={{ duration: 0.5 }}
             style={{ justifyContent: 'center' }}
           >
-            Questions fréquentes
+            {section_tag}
           </motion.div>
           <motion.h2
             className="section-title light"
@@ -55,7 +31,7 @@ export default function FAQ() {
             viewport={{ once: true }}
             transition={{ duration: 0.65, delay: 0.1 }}
           >
-            Tout ce que vous voulez savoir
+            {title}
           </motion.h2>
         </div>
 

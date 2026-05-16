@@ -1,0 +1,33 @@
+{
+  "section_tag": "Services premium",
+  "title1": "L'excellence à ",
+  "title2": "chaque détail",
+  "lead": "Des prestations pensées pour aller au-delà du standard — un accompagnement sur mesure du premier rendez-vous à la remise des clés.",
+  "cta_text": "Demander un devis gratuit",
+  "items": [
+    {
+      "num": "01",
+      "glowColor": "orange",
+      "title": "Gestion complète de votre projet",
+      "desc": "Après un rendez-vous pour cerner vos besoins, nous concevons un projet en accord avec vos attentes, illustré par une modélisation 3D. Nous prenons ensuite en charge l'ensemble des démarches jusqu'à la réception des travaux.",
+      "image": "https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=800&q=85&fit=crop",
+      "imageAlt": "Gestion et conception de projet de rénovation"
+    },
+    {
+      "num": "02",
+      "glowColor": "purple",
+      "title": "Décoration intérieure",
+      "desc": "Une décoratrice d'intérieur vous accompagne dans la sélection du mobilier et des éléments décoratifs afin de sublimer votre intérieur.",
+      "image": "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=800&q=85&fit=crop",
+      "imageAlt": "Décoration intérieure élégante et sur mesure"
+    },
+    {
+      "num": "03",
+      "glowColor": "green",
+      "title": "Jardin et espaces verts",
+      "desc": "Des artisans qualifiés pour entretenir et aménager vos espaces verts extérieurs.",
+      "image": "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=800&q=85&fit=crop",
+      "imageAlt": "Aménagement paysager et jardins extérieurs"
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "items": [
+    { "iconName": "Award",     "label": "Artisans qualifiés", "sub": "Sélectionnés & certifiés" },
+    { "iconName": "Clock",     "label": "Devis sous 48h",     "sub": "Gratuit & sans engagement" },
+    { "iconName": "MapPin",    "label": "Île-de-France",      "sub": "250+ chantiers livrés" },
+    { "iconName": "Handshake", "label": "Suivi personnalisé", "sub": "Un chef de projet dédié" }
+  ]
+}

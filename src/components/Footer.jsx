@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import { Instagram, Facebook, Linkedin, Mail, Phone, MapPin } from 'lucide-react'
 import HproLogo from '@/components/ui/HproLogo'
+import settingsData from '../content/settings.json'
 
 /* ─── Data ───────────────────────────────────────────────────── */
 
@@ -10,9 +11,9 @@ const scrollTo = (href) => {
 }
 
 const socialLinks = [
-  { Icon: Instagram, label: 'Instagram', href: 'https://instagram.com/' },
-  { Icon: Facebook,  label: 'Facebook',  href: 'https://facebook.com/' },
-  { Icon: Linkedin,  label: 'LinkedIn',  href: 'https://linkedin.com/' },
+  { Icon: Instagram, label: 'Instagram', href: settingsData.instagram },
+  { Icon: Facebook,  label: 'Facebook',  href: settingsData.facebook },
+  { Icon: Linkedin,  label: 'LinkedIn',  href: settingsData.linkedin },
 ]
 
 const serviceLinks = [
@@ -41,9 +42,9 @@ const usefulLinks = [
 ]
 
 const contactInfo = [
-  { Icon: Mail,   text: 'contact@hprotravaux.fr', href: 'mailto:contact@hprotravaux.fr' },
-  { Icon: Phone,  text: '06 73 74 66 70',           href: 'tel:+33673746670' },
-  { Icon: MapPin, text: 'Livry-Gargan & Île-de-France', href: '#', isAddress: true },
+  { Icon: Mail,   text: settingsData.email,        href: `mailto:${settingsData.email}` },
+  { Icon: Phone,  text: settingsData.phone_display, href: settingsData.phone_href },
+  { Icon: MapPin, text: settingsData.address,       href: '#', isAddress: true },
 ]
 
 
@@ -98,8 +99,7 @@ export default function Footer() {
               color: 'rgba(255,255,255,0.42)',
               fontFamily: 'var(--font-sans)',
             }}>
-              Entreprise de rénovation intérieure tous corps d'état en Île-de-France.
-              Artisans certifiés RGE, garantie décennale, plus de 15 ans d'expertise.
+              {settingsData.description}
             </p>
 
             {/* Social */}
@@ -297,7 +297,7 @@ export default function Footer() {
                   fontFamily: 'var(--font-sans)',
                   letterSpacing: '0.03em',
                 }}>
-                  Lun–Ven&nbsp;: 08h–19h&nbsp;·&nbsp;Sam&nbsp;: 09h–17h
+                  {settingsData.hours}
                 </li>
               </ul>
             </div>
@@ -320,7 +320,7 @@ export default function Footer() {
             © {new Date().getFullYear()} Hpro-travaux. Tous droits réservés.
           </p>
           <p style={{ fontSize: '0.74rem', color: 'rgba(255,255,255,0.22)', fontFamily: 'var(--font-sans)', letterSpacing: '0.05em' }}>
-            Livry-Gargan&nbsp;·&nbsp;Les Pavillons-sous-Bois&nbsp;·&nbsp;Claye-Souilly&nbsp;·&nbsp;Île-de-France
+            {settingsData.zones}
           </p>
           <p style={{ fontSize: '0.74rem', fontFamily: 'var(--font-sans)', display: 'flex', gap: '1rem' }}>
             <a href="/mentions-legales" style={{ color: 'rgba(255,255,255,0.3)', textDecoration: 'none', transition: 'color 0.2s' }}

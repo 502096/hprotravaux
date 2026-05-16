@@ -1,0 +1,8 @@
+{
+  "items": [
+    { "target": 15,  "suffix": "+", "label": "Années d'expérience" },
+    { "target": 250, "suffix": "+", "label": "Chantiers réalisés" },
+    { "target": 98,  "suffix": "%", "label": "Clients satisfaits" },
+    { "target": 10,  "suffix": "",  "label": "Corps d'état" }
+  ]
+}

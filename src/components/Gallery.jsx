@@ -1,37 +1,8 @@
 import { motion } from 'framer-motion'
 import { ZoomParallax } from './ui/zoom-parallax'
+import galleryData from '../content/gallery.json'
 
-const IMAGES = [
-  {
-    src: '/images/cozy-lively-home-interior-design.jpg',
-    alt: 'Salon cosy avec végétation — Réalisation Hpro-travaux',
-    objectPosition: 'center 55%',
-  },
-  {
-    src: '/images/94fc8e30-1ccd-4695-bc2c-6005251b132b.jpg',
-    alt: 'Cuisine ouverte avec verrière — Le Chesnay',
-  },
-  {
-    src: '/images/9fe1075f-6599-4dea-a0eb-c11958bf3b73.jpg',
-    alt: 'Salle de bain double vasque — Livry-Gargan',
-  },
-  {
-    src: '/images/935ca161-7925-4c4d-8428-83cc934d6141.jpg',
-    alt: 'Chambre principale avec tête de lit sur-mesure — Paris 16e',
-  },
-  {
-    src: '/images/d6e596fb-fe7a-4334-8d92-8dec7119def1.jpg',
-    alt: 'Bureau & espace de travail intégré — Les Pavillons-sous-Bois',
-  },
-  {
-    src: '/images/e5f9a4fb-a3a8-481a-bb07-ee80c3504826.jpg',
-    alt: 'Chambre sous combles aménagée — Claye-Souilly',
-  },
-  {
-    src: '/images/ec12a996-ac20-40e8-9021-9b8f6f769770.jpg',
-    alt: 'Salle à manger contemporaine — Paris',
-  },
-]
+const IMAGES = galleryData.items
 
 export default function Gallery() {
   return (
@@ -66,7 +37,7 @@ export default function Gallery() {
             fontWeight: 600,
             fontFamily: 'var(--font-sans)',
           }}>
-            Nos réalisations
+            {galleryData.section_tag}
           </span>
         </motion.div>
 
@@ -85,9 +56,9 @@ export default function Gallery() {
             margin: 0,
           }}
         >
-          Chaque projet,
+          {galleryData.title1}
           <br />
-          <span style={{ color: '#C97D16' }}>une histoire unique.</span>
+          <span style={{ color: '#C97D16' }}>{galleryData.title2}</span>
         </motion.h2>
       </div>
 

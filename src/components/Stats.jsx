@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { motion, useInView } from 'framer-motion'
+import statsData from '../content/stats.json'
 
 function Counter({ target, suffix = '', prefix = '' }) {
   const [count, setCount] = useState(0)
@@ -29,12 +30,7 @@ function Counter({ target, suffix = '', prefix = '' }) {
   )
 }
 
-const stats = [
-  { target: 15, suffix: '+', label: "Années d'expérience" },
-  { target: 250, suffix: '+', label: 'Chantiers réalisés' },
-  { target: 98, suffix: '%', label: 'Clients satisfaits' },
-  { target: 10, suffix: '', label: 'Corps d\'état' },
-]
+const stats = statsData.items
 
 export default function Stats() {
   return (

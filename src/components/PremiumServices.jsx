@@ -2,38 +2,11 @@ import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
 import { ArrowRight } from 'lucide-react'
 import { GlowCard } from './ui/GlowCard'
+import servicesData from '../content/services.json'
 
 /* ─── Data ─────────────────────────────────────────────────────── */
 
-const SERVICES = [
-  {
-    id: 1,
-    num: '01',
-    glowColor: 'orange',
-    title: 'Gestion complète de votre projet',
-    desc: "Après un rendez-vous pour cerner vos besoins, nous concevons un projet en accord avec vos attentes, illustré par une modélisation 3D. Nous prenons ensuite en charge l'ensemble des démarches jusqu'à la réception des travaux.",
-    image: 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=800&q=85&fit=crop',
-    imageAlt: 'Gestion et conception de projet de rénovation',
-  },
-  {
-    id: 2,
-    num: '02',
-    glowColor: 'purple',
-    title: 'Décoration intérieure',
-    desc: "Une décoratrice d'intérieur vous accompagne dans la sélection du mobilier et des éléments décoratifs afin de sublimer votre intérieur.",
-    image: 'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=800&q=85&fit=crop',
-    imageAlt: 'Décoration intérieure élégante et sur mesure',
-  },
-  {
-    id: 3,
-    num: '03',
-    glowColor: 'green',
-    title: 'Jardin et espaces verts',
-    desc: "Des artisans qualifiés pour entretenir et aménager vos espaces verts extérieurs.",
-    image: 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=800&q=85&fit=crop',
-    imageAlt: 'Aménagement paysager et jardins extérieurs',
-  },
-]
+const SERVICES = servicesData.items.map((item, i) => ({ ...item, id: i + 1 }))
 
 /* ─── ServiceCard ───────────────────────────────────────────────── */
 
@@ -148,7 +121,7 @@ function SectionHeader() {
         animate={isInView ? { opacity: 1, x: 0 } : {}}
         transition={{ duration: 0.5 }}
       >
-        Services premium
+        {servicesData.section_tag}
       </motion.div>
 
       <motion.h2
@@ -157,8 +130,8 @@ function SectionHeader() {
         animate={isInView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.7, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
       >
-        L'excellence à{' '}
-        <span style={{ color: '#C97D16' }}>chaque détail</span>
+        {servicesData.title1}
+        <span style={{ color: '#C97D16' }}>{servicesData.title2}</span>
       </motion.h2>
 
       <motion.p
@@ -168,8 +141,7 @@ function SectionHeader() {
         animate={isInView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.7, delay: 0.2 }}
       >
-        Des prestations pensées pour aller au-delà du standard — un accompagnement
-        sur mesure du premier rendez-vous à la remise des clés.
+        {servicesData.lead}
       </motion.p>
     </div>
   )
@@ -241,7 +213,7 @@ export default function PremiumServices() {
             onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
             className="premium-cta-btn inline-flex items-center gap-3 font-bold"
           >
-            Demander un devis gratuit
+            {servicesData.cta_text}
             <span className="premium-cta-icon">
               <ArrowRight size={13} strokeWidth={2.5} />
             </span>
