@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { ArrowRight } from 'lucide-react'
 import { TopbarNav } from '@/components/ui/topbar-nav'
@@ -22,6 +23,12 @@ const stats = [
 
 export default function AboutPage() {
   const goToContact = () => { window.location.href = '/#contact' }
+
+  useEffect(() => {
+    document.title = 'À propos — Hpro Travaux | Entreprise de rénovation intérieure en Île-de-France'
+    const meta = document.querySelector('meta[name="description"]')
+    if (meta) meta.setAttribute('content', "Découvrez Hpro Travaux, entreprise de rénovation intérieure fondée en 2018 en Île-de-France. 18 ans d'expérience, 10 corps de métier, 250+ chantiers livrés à Paris et en Seine-Saint-Denis.")
+  }, [])
 
   return (
     <div style={{ background: '#0A0C08', minHeight: '100vh', color: '#F5F0E8' }}>

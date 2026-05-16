@@ -11,6 +11,7 @@ import FAQ from './components/FAQ'
 import PremiumServices from './components/PremiumServices'
 import StylesVizSection from './components/StylesVizSection'
 import CTA from './components/CTA'
+import SeoContent from './components/SeoContent'
 import ContactForm from './components/ContactForm'
 import Footer from './components/Footer'
 import CookieBanner from './components/CookieBanner'
@@ -55,6 +56,7 @@ function PageContent() {
         <Testimonials />
         <FAQ />
         <CTA />
+        <SeoContent />
         <ContactForm />
       </main>
       <Services />
